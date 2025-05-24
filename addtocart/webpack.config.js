@@ -14,6 +14,9 @@ module.exports = (_, argv) => ({
 
   devServer: {
     port: 3003,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
     historyApiFallback: true,
   },
 

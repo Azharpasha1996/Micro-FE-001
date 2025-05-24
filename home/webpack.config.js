@@ -13,6 +13,9 @@ module.exports = (_, argv) => ({
 
   devServer: {
     port: 3000,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
     historyApiFallback: true,
   },
 
@@ -52,6 +55,7 @@ module.exports = (_, argv) => ({
         "./Header": "./src/Header.jsx",
         "./Footer": "./src/Footer.jsx",
         "./products": "./src/products.js",
+        "./HomeContent": "./src/HomeContent.jsx",
       },
       shared: {
         ...deps,
