@@ -13,6 +13,9 @@ module.exports = (_, argv) => ({
 
   devServer: {
     port: 3001,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
     historyApiFallback: true,
   },
 
@@ -49,7 +52,9 @@ module.exports = (_, argv) => ({
         cart: "cart@http://localhost:3002/remoteEntry.js",
         addtocart: "addtocart@http://localhost:3003/remoteEntry.js",
       },
-      exposes: {},
+      exposes: {
+        "./PDPContent": "./src/PDPContent.jsx",
+      },
       shared: {
         ...deps,
         react: {

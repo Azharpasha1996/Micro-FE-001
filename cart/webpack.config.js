@@ -13,6 +13,9 @@ module.exports = (_, argv) => ({
 
   devServer: {
     port: 3002,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
     historyApiFallback: true,
   },
 
@@ -51,7 +54,8 @@ module.exports = (_, argv) => ({
       exposes: {
         "./cart": "./src/cart.js",
         "./Login": "./src/Login.jsx",
-        "./MiniCart": "./src/MiniCart.jsx",        
+        "./MiniCart": "./src/MiniCart.jsx",
+        "./CartContent": "./src/CartContent.jsx",        
       },
       shared: {
         ...deps,
