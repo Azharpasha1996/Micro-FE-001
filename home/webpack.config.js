@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack');
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: "http://mf1-frontend/",
   },
 
   resolve: {
@@ -47,9 +47,9 @@ module.exports = (_, argv) => ({
       name: "home",
       filename: "remoteEntry.js",
       remotes: {
-        home: "home@http://localhost:3000/remoteEntry.js",
-        pdp: "pdp@http://localhost:3001/remoteEntry.js",
-        cart: "cart@http://localhost:3002/remoteEntry.js",
+        home: "home@http://mf1-frontend/remoteEntry.js",
+        pdp: "pdp@http://mf2-frontend/remoteEntry.js",
+        cart: "cart@http://mf4-frontend/remoteEntry.js",
       },
       exposes: {
         "./Header": "./src/Header.jsx",

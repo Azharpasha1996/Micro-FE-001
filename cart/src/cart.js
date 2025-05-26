@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BehaviorSubject } from "rxjs";
 
 
-const API_SERVER = "http://localhost:8080";
+const API_SERVER = "http://mf3-frontend";
 
 export const jwt = new BehaviorSubject(null);
 export const cart = new BehaviorSubject(null);
