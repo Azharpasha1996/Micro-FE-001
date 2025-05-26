@@ -17,6 +17,8 @@ module.exports = (_, argv) => ({
       "Access-Control-Allow-Origin": "*",
     },
     historyApiFallback: true,
+    allowedHosts: 'all', // 👈 ADD THIS LINE
+    host: '0.0.0.0',      // 👈 Optional:
   },
 
   module: {
